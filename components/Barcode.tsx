@@ -34,13 +34,13 @@ export default function Barcode() {
     if (hasPermission === false) {
         return (
             <View>
+                <Text>Barcode scanner app</Text>
                 <Text>No access to camera</Text>
                 <Button
                     title={'Allow Camera'}
                     onPress={() => {
                         (async () => {
                             const { status } = await BarCodeScanner.requestPermissionsAsync();
-                            console.log(status);
                             setHasPermission(status === 'granted');
                         })();
                     }}
