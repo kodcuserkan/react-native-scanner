@@ -2,7 +2,7 @@ import React from "react";
 import { useQuery } from "react-query";
 import { Text, FlatList, View, StyleSheet } from "react-native";
 import { productType } from "../types";
-import Product from "./ProductCard";
+import ProductCard from "./ProductCard";
 
 const ProductList: React.FC = () => {
   const { data, error, isLoading } = useQuery<
@@ -26,7 +26,7 @@ const ProductList: React.FC = () => {
       <Text style={styles.title}>Product List</Text>
       <FlatList
         data={data}
-        renderItem={({ item }) => <Product product={item} />}
+        renderItem={({ item }) => <ProductCard product={item} />}
         keyExtractor={item => item.id.toString()}
       />
     </View>

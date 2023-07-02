@@ -2,7 +2,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import { productType } from "../types";
 import { Rating } from "react-native-ratings";
 
-const Product = ({ product }: { product: productType }) => {
+const ProductCard = ({ product }: { product: productType }) => {
   return (
     <View style={styles.card}>
       <Text style={styles.headerText}>
@@ -99,4 +99,4 @@ const styles = StyleSheet.create({
   cardContent: {}
 });
 
-export default Product;
+export default ProductCard;
